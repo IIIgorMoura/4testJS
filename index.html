@@ -6,25 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Pesquisar</title>
+
     <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <section class="alinhar">
-        <h1>Cadastro de livros</h1>
+        <h1 class="titulo">Cadastro de livros</h1>
 
-        <input id="nomeLivro" placeholder="Nome" type="text">
-        <input id="autorLivro" placeholder="Autor" type="text">
-        <input id="anoLivro" placeholder="Ano" type="number">
+        <p class="titulo" id="result">Cadastre um livro</p>
 
-        <button onclick="adicionar()">
+        <input class="container form txt" id="nomeLivro" placeholder="Nome" type="text">
+        <input class="container form txt" id="autorLivro" placeholder="Autor" type="text">
+        <input class="container form txt" id="anoLivro" placeholder="Ano" type="number">
+
+        <button class="container botao txt" id="adiciona" onclick="adicionar()">
             Adicionar livro
         </button>
 
-        <button onclick="mostrarLivros()">
+        <button class="container botao txt" id="exibir" onclick="mostrarLivros()">
             Mostrar
         </button>
+
+        <button class="container botao txt" id="remover" onclick="apagar()">
+            Apagar registros
+        </button>
+
     </section>
+
+    <section class="alinhar">
+
+
+
+        <div class="botaoCarrossel">
+            <button class="container botao txt" id="anterior" onclick="retornar()">
+                Anterior
+            </button>
+
+            <button class="container botao txt" id="proximo" onclick="avancar()">
+                Próximo
+            </button>
+        </div>
+
+        <div class="informacoes">
+
+        </div>
+    </section>
+
 </body>
 
 </html>
