@@ -23,7 +23,9 @@ function adicionar() {
 
 function mostrarLivros() {
     for (let x of biblioteca) {
-        console.log(x.nome, x.autor, x.ano)
+        document.getElementById('detalhesLivro').innerHTML = x.nome
+        document.getElementById('detalhesAutor').innerHTML = x.autor
+        document.getElementById('detalhesAno').innerHTML = x.ano
     };
 };
 
