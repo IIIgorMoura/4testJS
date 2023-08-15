@@ -1,6 +1,5 @@
+// cadastro
 let biblioteca = [];
-
-
 
 function cadastro(nome, autor, ano) {
     var livro = {
@@ -33,3 +32,4 @@ function apagar() {
 
     document.getElementById('result').innerHTML = "Cadastre um livro"
 };
+// fim cadastro

@@ -32,27 +32,58 @@
         <button class="container botao txt" id="remover" onclick="apagar()">
             Apagar registros
         </button>
-
     </section>
 
-    <section class="alinhar">
+    <div class="alinhar">
+        <section class="carrossel">
+            <img id="carrosselImagem" src="" alt="livros">
 
+            <div class="botaoCarrossel">
+                <button class="container botao txt" id="anterior">Anterior</button>
+                <button class="container botao txt" id="proximo">Próxima</button>
+            </div>
+        </section>
+    </div>
 
+    <script>
+        let imgIndice = 0;
 
-        <div class="botaoCarrossel">
-            <button class="container botao txt" id="anterior" onclick="retornar()">
-                Anterior
-            </button>
+        const IMAGENS = ['image1.png', 'image2.png', 'image3.png', 'image4.png'];
 
-            <button class="container botao txt" id="proximo" onclick="avancar()">
-                Próximo
-            </button>
-        </div>
+        const prevButton = document.getElementById('anterior');
+        const nextButton = document.getElementById('proximo');
 
-        <div class="informacoes">
+        var IMG = document.getElementById('carrosselImagem');
 
-        </div>
-    </section>
+        function carregar() {
+            IMG.src = IMAGENS[imgIndice];
+        }
+
+        prevButton.addEventListener('click', () => {
+            --imgIndice
+            carregar();
+
+            if (imgIndice < 0) {
+                imgIndice = 4;
+                --imgIndice;
+
+                carregar();
+            }
+        });
+
+        nextButton.addEventListener('click', () => {
+            ++imgIndice
+            carregar();
+
+            if (imgIndice > 3) {
+                imgIndice = 1;
+                --imgIndice;
+
+                carregar();
+            }
+        });
+        carregar();
+    </script>
 
 </body>
 
