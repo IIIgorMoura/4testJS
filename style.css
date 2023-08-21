@@ -132,8 +132,8 @@ body {
 
 /* CARROSEL */
 /* fundo */
-.detalhesFundo {
-    display: flex;
+#detalhesFundo {
+    display: none;
     margin: 25px;
 
     padding: 30px;
