@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Pesquisar</title>
+    <title>Biblioteca</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -58,8 +58,6 @@
     <script>
         let biblioteca = [];
 
-        let a = biblioteca.livro[0];
-
         function cadastro(nome, autor, ano) {
             var livro = {
                 nome: nome,
@@ -83,11 +81,18 @@
         function apagar() {
             biblioteca.length = 0
 
-            document.getElementById('detalhesLivro').innerHTML = ""
-            document.getElementById('detalhesAutor').innerHTML = ""
-            document.getElementById('detalhesAno').innerHTML = ""
+            document.getElementById('detalhesLivro').innerHTML = "";
+            document.getElementById('detalhesAutor').innerHTML = "";
+            document.getElementById('detalhesAno').innerHTML = "";
+
+            let nome = document.getElementById('nomeLivro').value = '';
+            let autor = document.getElementById('autorLivro').value = '';
+            let ano = document.getElementById('anoLivro').value = '';
 
             document.getElementById('result').innerHTML = "Cadastre um livro"
+
+            let aparecer = document.getElementById('detalhesFundo');
+            aparecer.style.display = 'none';
         };
     </script>
 
@@ -103,7 +108,6 @@
             };
 
             let aparecer = document.getElementById('detalhesFundo');
-
             aparecer.style.display = 'flex';
         };
 
@@ -193,9 +197,6 @@
         });
         carregar();
     </script>
-
-
-
 </body>
 
 </html>
